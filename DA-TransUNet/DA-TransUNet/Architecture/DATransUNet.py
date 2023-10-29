@@ -173,7 +173,7 @@ class Embeddings(nn.Module):
         else:
             features = None
         x = self.patch_embeddings(x)  # (B, hidden. n_patches^(1/2), n_patches^(1/2))
-        # x = self.DAblock1(x)
+        x = self.DAblock1(x)
         x = x.flatten(2)
         x = x.transpose(-1, -2)  # (B, n_patches, hidden)
 
@@ -330,14 +330,14 @@ class DecoderBlock(nn.Module):
     def forward(self, x, skip=None):
         x = self.up(x)
         if skip is not None:
-            # if skip.size(1) and x.size(1) == 64:
-            #     skip = self.da(skip) 
+            if skip.size(1) and x.size(1) == 64:
+                skip = self.da(skip) 
             
-            # if skip.size(1) and x.size(1) == 256:
-            #     skip = self.da2(skip)
+            if skip.size(1) and x.size(1) == 256:
+                skip = self.da2(skip)
                 
-            # if skip.size(1) and x.size(1) == 512:
-            #     skip = self.da3(skip)
+            if skip.size(1) and x.size(1) == 512:
+                skip = self.da3(skip)
                 
             x = torch.cat([x, skip], dim=1)
         x = self.conv1(x)
