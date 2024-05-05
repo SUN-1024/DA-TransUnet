@@ -15,7 +15,7 @@ Run the train script on synapse dataset. The batch size can be reduced to 12 or 
 
 ### 5.Hints
 It requires about 15GB memory usage to run the train.py with batch size 24 and running time of 150 epochs is about 2 hours and 40 minutes.
-
+Add default=True to argument --is_savenii in test.py to save the prediction results.
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --vit_name R50-ViT-B_16
