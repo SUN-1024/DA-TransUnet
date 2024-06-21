@@ -30,9 +30,12 @@ python test.py --dataset Synapse --vit_name R50-ViT-B_16
 * [TransUnet](https://github.com/Beckschen/TransUNet)
 
 ## Citation
-@article{sun2023transunet,
-  title={DA-TransUNet: Integrating Spatial and Channel Dual Attention with Transformer U-Net for Medical Image Segmentation},
-  author={Sun, Guanqun and Pan, Yizhi and Kong, Weikun and Xu, Zichang and Ma, Jianhua and Racharak, Teeradaj,   Nguyen, Le-Minh, Junyi Xin},
-  journal={arXiv preprint arXiv:2310.12570},
-  year={2023}
+@article{sun2024transunet,
+  title={DA-TransUNet: integrating spatial and channel dual attention with transformer U-net for medical image segmentation},
+  author={Sun, Guanqun and Pan, Yizhi and Kong, Weikun and Xu, Zichang and Ma, Jianhua and Racharak, Teeradaj and Nguyen, Le-Minh and Xin, Junyi},
+  journal={Frontiers in Bioengineering and Biotechnology},
+  volume={12},
+  pages={1398237},
+  year={2024},
+  publisher={Frontiers Media SA}
 }
