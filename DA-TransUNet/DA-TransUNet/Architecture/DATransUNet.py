@@ -330,7 +330,7 @@ class DecoderBlock(nn.Module):
     def forward(self, x, skip=None):
         x = self.up(x)
         if skip is not None:
-            if skip.size(1) and x.size(1) == 64:
+            if skip.size(1) and x.size(1) == 128:
                 skip = self.da(skip) 
             
             if skip.size(1) and x.size(1) == 256:
