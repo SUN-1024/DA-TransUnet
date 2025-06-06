@@ -1,5 +1,5 @@
 # DA-TransUnet
-DA-TransUNet: Integrating Positional and Channel Dual Attention with Transformer-Based U-Net for Enhanced Medical Image Segmentation  (https://arxiv.org/abs/2310.12570)
+DA-TransUNet: Integrating Positional and Channel Dual Attention with Transformer-Based U-Net for Enhanced Medical Image Segmentation  (https://doi.org/10.3389/fbioe.2024.1398237)
 
 ### 1.Prepare pre-trained ViT models
 * [Get models and training parameters in this link](https://drive.google.com/drive/folders/1UqIEPcohjIZdpT5bIc0NPcxkvI8i4ily): R50-ViT-B_16,At the same time, the parameter file (.pth) in the paper is also stored.(You can download and compress it, put it into the model file and rename it TU_Synapse224, and then use the test code (python test.py --dataset Synapse --vit_name R50-ViT-B_16) to get the test results.)
