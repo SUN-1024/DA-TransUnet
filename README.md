@@ -23,6 +23,12 @@ CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --vit_name R50-ViT-B_16
 python test.py --dataset Synapse --vit_name R50-ViT-B_16
 ```
 
+### 5.Hints
+It requires about 15GB memory usage to run the train.py with batch size 24 and running time of 150 epochs is about 2 hours and 40 minutes.
+Add default=True to argument --is_savenii in test.py to save the prediction results.
+Due to version issues, the Boolean representation of numpy has changed. Open the file your_environment\Lib\site-packages\medpy\metric\binary.py,
+change all numpy.bool to numpy.bool_
+
 ## Reference 
 * [Google ViT](https://github.com/google-research/vision_transformer)
 * [ViT-pytorch](https://github.com/jeonsworld/ViT-pytorch)
